@@ -16,7 +16,7 @@ export const hotStore = defineStore("todo", {
     state: () => {
         return {
             params: {
-                key: 'b6aa439da8e05694811cbe5009038c12'
+                key: ''
             } as paramsD,
             hotData: [] as hotDefine[],
         }
