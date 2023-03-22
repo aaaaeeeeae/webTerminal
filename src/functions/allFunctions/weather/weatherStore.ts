@@ -20,7 +20,7 @@ export const weatherStore = defineStore("weather", {
         return {
             params: {
                 city: '500000',
-                key: ''
+                key: 'acab0c6d8017f0b6b43b0a80483d0ac9'
             } as paramsD,
             weatherData: {
                 province: "",
