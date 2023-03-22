@@ -17,7 +17,9 @@
           >
             <!-- 命令当做头部内容 -->
             <template #header>
-              <span style="user-select: none; margin-right: 10px">[$localhost]</span>
+              <span style="user-select: none; margin-right: 10px"
+                >[$localhost]</span
+              >
               <span>{{ output.text }}</span>
             </template>
             <!-- 结果内容 -->
@@ -35,7 +37,9 @@
             <template v-if="output.type == 'command'">
               <!-- 命令当做头部内容 -->
               <div class="terminal-row">
-                <span style="user-select: none; margin-right: 10px">[$localhost]</span>
+                <span style="user-select: none; margin-right: 10px"
+                  >[$localhost]</span
+                >
                 <span>{{ output.text }}</span>
               </div>
               <!-- 结果内容 -->
@@ -285,7 +289,10 @@ onMounted(() => {
   registerShortcut(terminal);
   terminal.writeDirectText("初始化成功，欢迎使用网页终端！");
   terminal.writeDirectText("输入'help'可查看所有命令");
-  terminal.writeDirectText("点击阅读文档可快速上手：" + `<a>快速上手</a>`);
+  terminal.writeDirectText(
+    "点击阅读文档可快速上手：" +
+      `<a href="//github.com/aaaaeeeeae/webTerminal/blob/main/README.md" target='_blank'>快速上手</a>`
+  );
   terminal.writeDirectText("<br/>");
 });
 
