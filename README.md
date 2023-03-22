@@ -12,7 +12,7 @@
 
 ![](./doc/todo.png)
 
-![](./doc/.png)
+![](./doc/hot.png)
 ## 快速上手
 
 打开网站
