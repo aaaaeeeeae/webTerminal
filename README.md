@@ -12,8 +12,7 @@
 
 ![](./doc/todo.png)
 
-<img src="./doc/weather.png" style="zoom:50%;" />
-
+![](./doc/.png)
 ## 快速上手
 
 打开网站
