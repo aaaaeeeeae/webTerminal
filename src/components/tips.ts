@@ -10,8 +10,7 @@ const getTips = () => {
         const {showTips} = terminalConfigStore()
         // 如果未开启提示
         if (!showTips){
-            console.log("命令");
-            console.log(showTips);
+            tip.value = ""
             return;
         } 
         // 如果当前输入为空，不提示

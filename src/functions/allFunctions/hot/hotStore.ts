@@ -12,7 +12,7 @@ export interface hotDefine {
     hottag: string
 
 }
-export const hotStore = defineStore("todo", {
+export const hotStore = defineStore("hot", {
     state: () => {
         return {
             params: {
