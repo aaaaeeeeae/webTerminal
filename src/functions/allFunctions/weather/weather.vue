@@ -51,9 +51,6 @@ var icon = computed(() => {
 onMounted(async () => {
   await getData();
 });
-// onUpdated(async ()=>{
-//   await getData();
-// })
 </script>
 
 <style scoped>

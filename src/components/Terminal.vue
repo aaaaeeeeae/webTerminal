@@ -1,7 +1,7 @@
 <template>
   <!-- 处理背景 -->
   <div class="terminal-wrapper" @click="clickfocusInput">
-    <div class="terminal" :style="mainStyle">
+    <div class="terminal" :style="mainStyle" ref="terminalDiv">
       <!-- 输出框 -->
       <a-collapse
         v-model:activeKey="activeKey"
@@ -105,6 +105,8 @@ import getTips from "./tips";
 const { tip, setTips } = getTips();
 // 是否正在运行
 let isRunnning = ref(false);
+// 获取终端界面
+let terminalDiv = ref()
 // 控制对应下标的折叠面板是否折叠
 const activeKey = ref<number[]>([]);
 // 父子通信
@@ -114,7 +116,6 @@ const submitToCore: any = inject("submitToCore");
 interface TerminalSettings {
   height?: string | number;
   fullScreen?: boolean;
-  // user?: UserType;
   onSubmitCommand?: (inputText: string) => void;
 }
 // 终端的初始化
@@ -179,6 +180,10 @@ async function submit() {
   inputValue.value = { ...initInput };
   // 默认展开折叠面板
   activeKey.value.push(outputList.value.length - 1);
+  // 自动滚到底部
+  setTimeout(()=>{
+    terminalDiv.value.scrollTop = terminalDiv.value.scrollHeight
+  })
   isRunnning.value = false;
 }
 
