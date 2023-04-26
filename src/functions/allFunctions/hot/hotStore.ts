@@ -31,6 +31,7 @@ export const hotStore = defineStore("hot", {
                 if (response.status == 200) {
                     const list = response.data.result.list.slice(0,10)
                     this.hotData = list
+                    console.log(list);
                     // console.log(this.hotData);
                     // list.forEach(item => {
                     //     this.hotData.push(item)

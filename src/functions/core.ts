@@ -53,9 +53,6 @@ export const doParse = (text: string,
     // 调用第三方库getopts中的Options,按命令的options参数格式化
     const opt: getopts.Options = {
         alias: {},
-        // default: {},
-        // string: [],
-        // boolean: [],
     };
 
     options.forEach(option => {

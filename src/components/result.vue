@@ -20,7 +20,7 @@ import OutputType = TerminalStandard.OutputType;
 import smartText from '../utils/regText'
 const props = defineProps<{ outres: OutputType }>();
 const { outres } = toRefs(props);
-
+console.log(outres);
 const getColor = computed(() => {
   if (!outres.value.state) {
     return "";
